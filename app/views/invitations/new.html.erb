@@ -1,0 +1,34 @@
+<h1 class='title text-center'>Pat & Jo Wedding</h1>
+
+<div class='message'>
+  <p>Kindly join us at our wedding ceremony</p>
+  <p>Sunday, 5th November 2017 at 11.30</p>
+  <p>
+    Chan Palace Nakhon Pathom
+    <%=
+      link_to '[Map]',
+      'https://www.google.co.th/maps/place/%E0%B9%82%E0%B8%A3%E0%B8%87%E0%B9%81%E0%B8%A3%E0%B8%A1%E0%B8%88%E0%B8%B1%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B9%8C%E0%B8%9E%E0%B8%B2%E0%B9%80%E0%B8%A5%E0%B8%AA+%E0%B8%99%E0%B8%84%E0%B8%A3%E0%B8%9B%E0%B8%90%E0%B8%A1/@13.8249407,100.0409223,17z/data=!4m8!1m2!2m1!1z4LmC4Lij4LiH4LmB4Lij4Lih4LiI4Lix4LiZ4LiX4Lij4LmM4Lie4Liy4LmA4Lil4LiqIOC4meC4hOC4o-C4m-C4kOC4oSDguJXguLPguJrguKUg4LiZ4LiE4Lij4Lib4LiQ4LihIOC4meC4hOC4o-C4m-C4kOC4oQ!3m4!1s0x30e2e5b60e531447:0xf02ca424da41624f!8m2!3d13.82423!4d100.04223?hl=th',
+      target: '_blank'
+    %>
+  </p>
+</div>
+
+<%= simple_form_for @invitation, html: { class: 'form-horizontal' } do |f| %>
+  <div id='invitation_form' class='row'>
+    <div class='col-md-3'>
+      <%= f.input :first_name, label: 'First Name' %>
+    </div>
+    <div class='col-md-3'>
+      <%= f.input :last_name, label: 'Last Name' %>
+    </div>
+    <div class='col-md-2'>
+      <%= f.input :note, label: 'Nickname (Group)', placeholder: 'e.g. Jo (ACT)' %>
+    </div>
+    <div class='col-md-2'>
+      <%= f.input :number_of_guests, label: 'Number of Guests', collection: 1..4, include_blank: false %>
+    </div>
+    <div class='col-md-2'>
+      <%= f.submit 'Submit', class: 'btn btn-primary btn-block' %>
+    </div>
+  </div>
+<% end %>

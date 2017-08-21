@@ -1,0 +1,21 @@
+<h1>Invitations List</h1>
+
+<div class='row'>
+  <div class='col-md-12'>
+    <h3>จำนวนแขกทั้งหมด <%= @invitations.sum(:number_of_guests) %> คน</h3>
+
+    <table class='table table-striped'>
+      <thead>
+        <tr>
+          <th>ชื่อ</th>
+          <th>นามสกุล</th>
+          <th>ชื่อเล่น (กลุ่ม)</th>
+          <th>จำนวนคน</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @invitations %>
+      </tbody>
+    </table>
+  </div>
+</div>
