@@ -1,2 +1,57 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Mitr&subset=thai');
+
+body {
+  font-family: 'Mitr', sans-serif;
+}
+
+.title {
+  font-size: 50px;
+  color: #003d66;
+}
+
+.message {
+  @media (min-width: 376px) {
+    padding: 30px;
+    height: 500px;
+  }
+
+  margin: 20px 0;
+  padding: 15px;
+  font-size: 20px;
+  text-align: center;
+  background-image: url('http://res.cloudinary.com/dweagbtvy/image/upload/v1503323264/bg_yj2esi.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+#invitation_form {
+  background-color: #b3ccff;
+  border-radius: 3px;
+}
+
+.form-horizontal {
+  padding: 0 15px;
+
+  .form-group {
+    padding: 0 5px;
+  }
+
+  .btn {
+    margin-top: 27px;
+  }
+
+  @media (max-width: 375px) {
+    .btn {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.thank-you {
+  padding: 50px 20px;
+  font-size: 26px;
+  text-align: center;
+  color: #003d66;
+}
